@@ -130,6 +130,7 @@
 
 
 
+
   #========================================================================================================
   #                                      Homemanager
   #========================================================================================================
@@ -176,6 +177,13 @@
       #autostart
       initExtra = "fastfetch";
     };
+
+  stylix = {
+    enable = true;
+    image = /home/jankoh/.dotfiles/nixcold.png;
+    polarity = "dark";
+    autoEnable = true;
+  };
 
     /*programs.kitty = {
       enable = true;
