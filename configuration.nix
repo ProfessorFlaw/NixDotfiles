@@ -137,10 +137,14 @@
   home-manager.users.jankoh = { pkgs, ... }: {
     home = {
       shellAliases = {
-          nixconfig = "kate /etc/nixos/configuration.nix";
-          nixrebuild = "sudo nixos-rebuild switch --flake . --impure";
+          nixconfig = "kate /home/jankoh/.dotfiles";
+          nixrebuild = ''cd /home/jankoh/.dotfiles/
+          sudo nixos-rebuild switch --flake . --impure'';
           labymod = "appimage-run /home/jankoh/Appimages/LabyMod\\ Launcher-latest.AppImage";
           kittythemes = "kitty +kitten themes";
+          gitupload = ''git add .
+          git commit -m "Update "no further reason clarified"
+          git push origin main'';
       };
     };
     home.packages = with pkgs; [
@@ -176,7 +180,7 @@
       initExtra = "fastfetch";
     };
 
-    programs.kitty = {
+    /*programs.kitty = {
       enable = true;
       font = {
         name = "JetBrainsMono Nerd Font";
@@ -184,7 +188,7 @@
       };
       shellIntegration.enableBashIntegration = true;
       theme = "Kaolin Ocean";
-    };
+    };*/
 
   # The state version is required and should stay at the version you
   # originally installed.
