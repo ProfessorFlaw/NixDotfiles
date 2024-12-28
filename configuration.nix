@@ -120,6 +120,15 @@
       };
     }; */
 
+    stylix = {
+      image = /home/jankoh/.dotfiles/wallpaper2.jpg;
+      enable = true;
+      polarity = "dark";
+      autoEnable = true;
+    };
+
+  home-manager.backupFileExtension = "backup3";
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
@@ -165,7 +174,6 @@
       orca-slicer
       superTuxKart
       gimp
-      tor-browser-bundle-bin
       qbittorrent
       motrix
     ];
@@ -177,13 +185,6 @@
       #autostart
       initExtra = "fastfetch";
     };
-
-  stylix = {
-    image = /home/jankoh/.dotfiles/nixcold.png;
-    enable = true;
-    polarity = "dark";
-    autoEnable = true;
-  };
 
     /*programs.kitty = {
       enable = true;
