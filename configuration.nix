@@ -179,8 +179,8 @@
     };
 
   stylix = {
-    enable = true;
     image = /home/jankoh/.dotfiles/nixcold.png;
+    enable = true;
     polarity = "dark";
     autoEnable = true;
   };
