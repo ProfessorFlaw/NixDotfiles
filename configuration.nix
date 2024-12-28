@@ -141,10 +141,7 @@
           nixrebuild = ''cd /home/jankoh/.dotfiles/
           sudo nixos-rebuild switch --flake . --impure'';
           labymod = "appimage-run /home/jankoh/Appimages/LabyMod\\ Launcher-latest.AppImage";
-          kittythemes = "kitty +kitten themes";
-          gitupload = ''git add .
-          git commit -m "Update "no further reason clarified"
-          git push origin main'';
+          #kittythemes = "kitty +kitten themes";
       };
     };
     home.packages = with pkgs; [
