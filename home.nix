@@ -1,4 +1,7 @@
-{ pkgs, ... }: {
+{ config, pkgs, lib, ... }:
+
+
+{
   # Home Manager configuration for user 'jankoh'
   home-manager.users.jankoh = {
     home = {
