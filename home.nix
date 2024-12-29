@@ -1,6 +1,5 @@
 { config, pkgs, lib, ... }:
 
-
 {
     home = {
       shellAliases = {
@@ -23,8 +22,6 @@
       podman
       bottles
       git
-      kitty
-      kitty-themes
       openscad
       orca-slicer
       superTuxKart
@@ -39,16 +36,6 @@
       enable = true;
       initExtra = "fastfetch";
     };
-
-    /* programs.kitty = {
-       enable = true;
-       font = {
-         name = "JetBrainsMono Nerd Font";
-         size = 10;
-       };
-       shellIntegration.enableBashIntegration = true;
-       theme = "Kaolin Ocean";
-      };*/
 
     # The state version is required and should stay at the version you originally installed.
     home.stateVersion = "24.11";

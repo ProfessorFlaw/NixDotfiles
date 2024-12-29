@@ -120,12 +120,12 @@
       };
     }; */
 
-    /*stylix = {
+    stylix = {
       image = /home/jankoh/.dotfiles/wallpaper2.jpg;
       enable = true;
       polarity = "dark";
       autoEnable = true;
-    };*/
+    };
 
   users.users.jankoh.isNormalUser = true;
 
