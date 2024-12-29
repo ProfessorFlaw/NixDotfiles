@@ -127,6 +127,8 @@
       autoEnable = true;
     };*/
 
+  users.users.jankoh.isNormalUser = true;
+
   home-manager.backupFileExtension = "backup4";
 
   # This value determines the NixOS release from which the default
