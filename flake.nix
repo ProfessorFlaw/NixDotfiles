@@ -21,16 +21,13 @@
       modules = [
         ./configuration.nix
         stylix.nixosModules.stylix
+        home-manager.nixosModules.home-manager {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.jankoh = import /home/jankoh/.dotfiles/home.nix;
 
-        home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.jankoh = import /home/jankoh/.dotfiles/home.nix;
-
-            # Optionally, use home-manager.extraSpecialArgs to pass
-            # arguments to home.nix
-          }
+          # Extra-Argumente
+        }
           {
           environment.systemPackages = [
             ghostty.packages.x86_64-linux.default
