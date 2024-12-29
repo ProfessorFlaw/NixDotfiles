@@ -4,7 +4,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      <home-manager/nixos>
+      #<home-manager/nixos>
     ];
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -120,12 +120,12 @@
       };
     }; */
 
-    stylix = {
+    /*stylix = {
       image = /home/jankoh/.dotfiles/wallpaper2.jpg;
       enable = true;
       polarity = "dark";
       autoEnable = true;
-    };
+    };*/
 
   home-manager.backupFileExtension = "backup4";
 
@@ -143,7 +143,7 @@
   #========================================================================================================
   #                                      Homemanager
   #========================================================================================================
-  users.users.jankoh.isNormalUser = true;
+  /*users.users.jankoh.isNormalUser = true;
   home-manager.users.jankoh = { pkgs, ... }: {
     home = {
       shellAliases = {
@@ -194,11 +194,11 @@
       };
       shellIntegration.enableBashIntegration = true;
       theme = "Kaolin Ocean";
-    };*/
+    };
 
   # The state version is required and should stay at the version you
   # originally installed.
   home.stateVersion = "24.11";
-};
+};*/
 
 }
