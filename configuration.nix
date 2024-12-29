@@ -125,6 +125,9 @@
       enable = true;
       polarity = "dark";
       autoEnable = true;
+      opacity.applications = 0.5;
+      opacity.desktop = 0.5;
+      opacity.terminal = 0.5;
     };
 
   users.users.jankoh.isNormalUser = true;
@@ -138,69 +141,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
-
-
-
-
-  #========================================================================================================
-  #                                      Homemanager
-  #========================================================================================================
-  /*users.users.jankoh.isNormalUser = true;
-  home-manager.users.jankoh = { pkgs, ... }: {
-    home = {
-      shellAliases = {
-          nixconfig = "kate /home/jankoh/.dotfiles";
-          nixrebuild = ''cd /home/jankoh/.dotfiles/
-          sudo nixos-rebuild switch --flake . --impure'';
-          labymod = "appimage-run /home/jankoh/Appimages/LabyMod\\ Launcher-latest.AppImage";
-          #kittythemes = "kitty +kitten themes";
-      };
-    };
-    home.packages = with pkgs; [
-      flatpak
-      neovim
-      fastfetch
-      libreoffice-still
-      appeditor
-      vscode-fhs
-      discord
-      dotnet-sdk_9
-      gparted
-      distrobox
-      podman
-      bottles
-      git
-      kitty
-      kitty-themes
-      openscad
-      orca-slicer
-      superTuxKart
-      gimp
-      qbittorrent
-      motrix
-    ];
-
-    nixpkgs.config.allowUnfree = true;
-
-    programs.bash = {
-      enable = true;
-      #autostart
-      initExtra = "fastfetch";
-    };
-
-    /*programs.kitty = {
-      enable = true;
-      font = {
-        name = "JetBrainsMono Nerd Font";
-        size = 10;
-      };
-      shellIntegration.enableBashIntegration = true;
-      theme = "Kaolin Ocean";
-    };
-
-  # The state version is required and should stay at the version you
-  # originally installed.
-  home.stateVersion = "24.11";
-};*/
-
 }

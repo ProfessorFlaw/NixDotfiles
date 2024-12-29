@@ -6,6 +6,10 @@
         nixconfig = "kate /home/jankoh/.dotfiles";
         nixrebuild = ''cd /home/jankoh/.dotfiles && sudo nixos-rebuild switch --flake . --impure'';
         labymod = "appimage-run \"/home/jankoh/Appimages/LabyMod Launcher-latest.AppImage\"";
+        netflix = "xdg-open https://www.netflix.com";
+        nixsearch = "xdg-open https://search.nixos.org/packages";
+        youtube = "xdg-open https://www.youtube.com/";
+        disney = "xdg-open https://www.disneyplus.com/en-gb/select-profile";
       };
     };
     home.packages = with pkgs; [
