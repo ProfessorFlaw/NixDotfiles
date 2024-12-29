@@ -21,7 +21,7 @@
       gparted
       distrobox
       podman
-      #bottles
+      bottles
       git
       kitty
       kitty-themes
