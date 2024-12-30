@@ -24,14 +24,13 @@
       gparted
       distrobox
       podman
-      bottles
       git
       openscad
-      orca-slicer
       superTuxKart
       gimp
       qbittorrent
       motrix
+      retroarch
     ];
 
     nixpkgs.config.allowUnfree = true;

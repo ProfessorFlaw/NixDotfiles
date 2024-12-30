@@ -3,10 +3,16 @@
 
   inputs = {
     # NixOS official package source
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nixpkgs = {
+      url = "github:NixOS/nixpkgs/nixos-24.11";
+      #url = "github:NixOS/nixpkgs/nixos-unstable";
+    };
+
+    nixpkgs-master.url = "github:nixos/nixpkgs";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-24.11";
+      #url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -15,7 +21,7 @@
     stylix.url = "github:danth/stylix";
   };
 
-  outputs = { self, nixpkgs, ghostty, stylix, home-manager, ... }@inputs: {
+  outputs = { self, nixpkgs, ghostty, stylix, home-manager, nixpkgs-master, ... }@inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
@@ -27,6 +33,7 @@
           home-manager.users.jankoh = import /home/jankoh/.dotfiles/home.nix;
 
           # Extra-Argumente
+          home-manager.extraSpecialArgs = { inherit (inputs) nixpkgs-master; };
         }
           {
           environment.systemPackages = [
