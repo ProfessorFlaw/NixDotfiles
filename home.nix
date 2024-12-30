@@ -31,6 +31,7 @@
       qbittorrent
       motrix
       retroarch
+      github-desktop
     ];
 
     nixpkgs.config.allowUnfree = true;
