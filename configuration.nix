@@ -72,7 +72,7 @@
   #UserACC
   users.users.jankoh = {
     description = "Janko Hartig";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "github" ];
   };
 
   #firefox.
@@ -122,7 +122,7 @@
     }; */
 
     stylix = {
-      image = /home/jankoh/.dotfiles/wallpaper2.jpg;
+      image = /home/jankoh/.dotfiles/nixlight.jpg;
       enable = true;
       polarity = "dark";
       autoEnable = true;
