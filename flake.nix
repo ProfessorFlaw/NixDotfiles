@@ -8,8 +8,6 @@
       url = "github:NixOS/nixpkgs/nixos-unstable";
     };
 
-    swayfx.url = "github:WillPower3309/swayfx";
-
     nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
 
     nixpkgs-master.url = "github:nixos/nixpkgs";
@@ -25,7 +23,7 @@
     stylix.url = "github:danth/stylix";
   };
 
-  outputs = { self, nixpkgs, ghostty, stylix, home-manager, nixpkgs-master, nixos-cosmic, swayfx, ... }@inputs: {
+  outputs = { self, nixpkgs, ghostty, stylix, home-manager, nixpkgs-master, nixos-cosmic, ... }@inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
@@ -52,7 +50,6 @@
           {
           environment.systemPackages = [
             ghostty.packages.x86_64-linux.default
-            swayfx.packages.x86_64-linux.swayfx-unwrapped
           ];
         }
       ];
