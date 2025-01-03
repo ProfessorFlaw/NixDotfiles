@@ -47,6 +47,11 @@
   services.desktopManager.plasma6.enable = true;
   services.desktopManager.cosmic.enable = true;
 
+   programs.sway = {
+    enable = true;
+    package = pkgs.swayfx;
+  };
+
   #Keyboard layout
   services.xserver.xkb = {
     layout = "de";
@@ -122,7 +127,7 @@
     }; */
 
     stylix = {
-      image = /home/jankoh/.dotfiles/nixlight.jpg;
+      image = /home/jankoh/.dotfiles/wallpapers/wallpaper1.jpg;
       enable = true;
       polarity = "dark";
       autoEnable = true;
