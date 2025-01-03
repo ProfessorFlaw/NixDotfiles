@@ -47,11 +47,6 @@
   services.desktopManager.plasma6.enable = true;
   services.desktopManager.cosmic.enable = true;
 
-   programs.sway = {
-    enable = true;
-    package = pkgs.swayfx;
-  };
-
   #Keyboard layout
   services.xserver.xkb = {
     layout = "de";
