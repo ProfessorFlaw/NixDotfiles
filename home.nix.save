@@ -13,7 +13,6 @@
         cleanold = "sudo nix-collect-garbage -d";
       };
     };
-
     home.packages = with pkgs; [
       flatpak
       neovim
