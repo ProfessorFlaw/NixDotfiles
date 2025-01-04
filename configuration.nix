@@ -58,6 +58,7 @@
 
   #CUPS (Printing)
   services.printing.enable = true;
+  services.printing.drivers = [ pkgs.hplip ];
 
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
@@ -133,7 +134,7 @@
 
   users.users.jankoh.isNormalUser = true;
 
-  home-manager.backupFileExtension = "backup4";
+  home-manager.backupFileExtension = "backup";
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

@@ -19,21 +19,18 @@
       neovim
       fastfetch
       libreoffice-still
-      appeditor
       vscode-fhs
       discord
       dotnet-sdk_9
       gparted
-      distrobox
       podman
       git
       openscad
       superTuxKart
       gimp
       qbittorrent
-      motrix
-      retroarch
       github-desktop
+      gtkhash
     ];
 
     nixpkgs.config.allowUnfree = true;
