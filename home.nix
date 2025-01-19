@@ -50,8 +50,11 @@
     };
 
     #========================KDE_Settings================================
-    /*programs.plasma = {
+    programs.plasma = {
       enable = true;
+
+      #overrideConfig =true;
+
       shortcuts = {
         "ActivityManager"."switch-to-activity-1f3c8de7-295d-4dc1-a04a-ceb99a4ef3a1" = [ ];
         "KDE Keyboard Layout Switcher"."Switch to Last-Used Keyboard Layout" = "Meta+Alt+L";
@@ -85,7 +88,9 @@
         "kwin"."ExposeAll" = ["Ctrl+F10" "Launch (C),Ctrl+F10" "Launch (C),Fenster aller Arbeitsflächen anzeigen"];
         "kwin"."ExposeClass" = "Ctrl+F7";
         "kwin"."ExposeClassCurrentDesktop" = [ ];
-        "kwin"."Grid View" = "Meta+G";
+
+        "kwin"."Grid View" = "Meta+N";
+
         "kwin"."Increase Opacity" = "none,,Die Deckkraft des aktiven Fensters um 5 % erhöhen";
         "kwin"."Kill Window" = "Meta+Ctrl+Esc";
         "kwin"."Move Tablet to Next Output" = [ ];
@@ -515,7 +520,7 @@
         "kate/anonymous.katesession"."Plugin:katesearchplugin:MainWindow:0"."SizeLimit" = 128;
         "kate/anonymous.katesession"."Plugin:katesearchplugin:MainWindow:0"."UseRegExp" = false;
       };
-    };*/
+    };
 
     # The state version is required and should stay at the version you originally installed.
     home.stateVersion = "24.11";

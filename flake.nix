@@ -49,7 +49,7 @@
           #home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.jankoh = import /home/jankoh/.dotfiles/home.nix;
-         # home-manager.sharedModules = [ inputs.plasma-manager.modules.plasma-manager ];
+          home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
 
 
           # Extra-Argumente
