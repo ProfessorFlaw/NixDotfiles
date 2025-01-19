@@ -10,6 +10,12 @@
 
     nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
 
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
+
     nixpkgs-master.url = "github:nixos/nixpkgs";
 
     home-manager = {
@@ -23,7 +29,7 @@
     stylix.url = "github:danth/stylix";
   };
 
-  outputs = { self, nixpkgs, ghostty, stylix, home-manager, nixpkgs-master, nixos-cosmic, ... }@inputs: {
+  outputs = { self, nixpkgs, ghostty, stylix, home-manager, nixpkgs-master, nixos-cosmic, plasma-manager, ... }@inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
@@ -40,9 +46,11 @@
         ./configuration.nix
         stylix.nixosModules.stylix
         home-manager.nixosModules.home-manager {
-          home-manager.useGlobalPkgs = true;
+          #home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.jankoh = import /home/jankoh/.dotfiles/home.nix;
+         # home-manager.sharedModules = [ inputs.plasma-manager.modules.plasma-manager ];
+
 
           # Extra-Argumente
           home-manager.extraSpecialArgs = { inherit (inputs) nixpkgs-master; };

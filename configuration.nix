@@ -45,7 +45,7 @@
 
   #DesktopEnvoirementDE
   services.desktopManager.plasma6.enable = true;
-  services.desktopManager.cosmic.enable = true;
+#  services.desktopManager.cosmic.enable = true;
 
   #Keyboard layout
   services.xserver.xkb = {
@@ -61,7 +61,7 @@
   services.printing.drivers = [ pkgs.hplip ];
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -69,6 +69,8 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
+
+  hardware.graphics.enable32Bit = true;
 
   #UserACC
   users.users.jankoh = {
@@ -95,7 +97,10 @@
     ly
     git
     base16-schemes
+
   ];
+
+  services.flatpak.enable = true;
 
   virtualisation.podman = {
     enable = true;
