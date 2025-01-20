@@ -12,6 +12,13 @@
 
   networking.hostName = "nixos"; # Define your hostname.
 
+  # Automatic Garbage Collection
+  nix.gc = {
+    automatic = true;
+    dates = « weekly »;
+    options = « —delete-older-than 7d »;
+  };
+
   # Enable networking
   networking.networkmanager.enable = true;
 
