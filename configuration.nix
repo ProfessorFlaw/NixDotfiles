@@ -52,7 +52,7 @@
 
   #DesktopEnvoirementDE
   services.desktopManager.plasma6.enable = true;
-#  services.desktopManager.cosmic.enable = true;
+  services.desktopManager.cosmic.enable = true;
 
   #Keyboard layout
   services.xserver.xkb = {
