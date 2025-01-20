@@ -40,6 +40,7 @@
       wine
       musescore
       orca-slicer
+      htop
     ];
 
     nixpkgs.config.allowUnfree = true;
