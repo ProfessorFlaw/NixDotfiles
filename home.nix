@@ -41,7 +41,9 @@
       musescore
       orca-slicer
       htop
-    ];
+      vlc
+      chromium
+      ];
 
     nixpkgs.config.allowUnfree = true;
 
