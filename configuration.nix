@@ -15,9 +15,12 @@
   # Automatic Garbage Collection
   nix.gc = {
     automatic = true;
-    dates = « weekly »;
-    options = « —delete-older-than 7d »;
+    dates = "weekly";
+    options = "—delete-older-than 7d";
   };
+
+  #storage optimisation
+  nix.settings.auto-optimise-store = true;
 
   # Enable networking
   networking.networkmanager.enable = true;
