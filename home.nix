@@ -1,8 +1,6 @@
 { config, pkgs, lib, nixpkgs-master, ... }:
 
 {
-    #test
-
     home = {
       shellAliases = {
         nixconfig = "kate /home/jankoh/.dotfiles";
