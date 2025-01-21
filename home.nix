@@ -1,7 +1,7 @@
 { config, pkgs, lib, nixpkgs-master, ... }:
 
 {
-    #imports = [ <plasma-manager/modules> ];
+    #test
 
     home = {
       shellAliases = {
