@@ -19,6 +19,9 @@
     options = « —delete-older-than 7d »;
   };
 
+  #storage optimisation
+  nix.settings.auto-optimise-store = true;
+
   # Enable networking
   networking.networkmanager.enable = true;
 
