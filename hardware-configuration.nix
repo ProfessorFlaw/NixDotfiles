@@ -3,8 +3,6 @@
 # to /etc/nixos/configuration.nix instead.
 { config, lib, pkgs, modulesPath, ... }:
 
-  #test
-
 {
   imports =
     [ (modulesPath + "/hardware/network/broadcom-43xx.nix")
