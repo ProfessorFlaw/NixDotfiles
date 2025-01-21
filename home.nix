@@ -43,6 +43,7 @@
       htop
       vlc
       chromium
+      gocr
       ];
 
     nixpkgs.config.allowUnfree = true;
