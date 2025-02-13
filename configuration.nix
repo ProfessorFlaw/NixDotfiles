@@ -12,12 +12,19 @@
 
   networking.hostName = "nixos"; # Define your hostname.
 
+  nixpkgs.config.allowBroken = true;
+
   # Automatic Garbage Collection
   nix.gc = {
     automatic = true;
     dates = "weekly";
     options = "—delete-older-than 7d";
   };
+
+  /*services.ollama = {
+    enable = true;
+    loadModels = [ deepseek-r1:8b ];
+  };*/
 
   #storage optimisation
   nix.settings.auto-optimise-store = true;
@@ -55,7 +62,7 @@
 
   #DesktopEnvoirementDE
   services.desktopManager.plasma6.enable = true;
-  #services.desktopManager.cosmic.enable = true;
+  services.desktopManager.cosmic.enable = true;
 
   #Keyboard layout
   services.xserver.xkb = {
@@ -107,7 +114,7 @@
     ly
     git
     base16-schemes
-
+    ffmpeg_6
   ];
 
   services.flatpak.enable = true;

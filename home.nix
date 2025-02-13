@@ -11,6 +11,7 @@
         youtube = "xdg-open https://www.youtube.com/";
         disney = "xdg-open https://www.disneyplus.com/en-gb/select-profile";
         cleanold = "sudo nix-collect-garbage -d";
+        switchgen = "sudo /run/current-system/bin/switch-to-configuration boot";
       };
     };
 
@@ -41,6 +42,8 @@
       htop
       vlc
       chromium
+      gnome-keyring
+      jdk23
       ];
 
     nixpkgs.config.allowUnfree = true;
